@@ -73,16 +73,16 @@ while True:
              
             if pimot.get_aposition() > 0: # if camera is tilted to the right - instruction for movement motor to correct heading (turning right)
                 # first motor negative degrees
-                lr1_mot = (10 * max_amplitude_motpiv * 2) * (-1)
+                lr1_mot = (10 * max_amplitude_motpiv * 3) * (-1)
                 # second motor positive degrees
-                lr2_mot = (10 * max_amplitude_motpiv * 2)
+                lr2_mot = (10 * max_amplitude_motpiv * 3)
                 
             elif pimot.get_aposition() < 0: # if camera is tilted to the left - instruction for movement motor to correct heading (turning left)
                 # first motor positive degrees and second motor positive degrees
-                # When camera turn x degrees motor movement must turn for 2x (experimental values -> is currently working on)
+                # When camera turn x degrees motor movement must turn for 3x (experimental values)
 
-                lr1_mot = 10 * max_amplitude_motpiv * 2
-                lr2_mot = 10 * max_amplitude_motpiv * 2
+                lr1_mot = 10 * max_amplitude_motpiv * 3
+                lr2_mot = 10 * max_amplitude_motpiv * 3
            
             ''' 
             #If unindexed that part make the robot react when target is up or down from the boundaries area by either reversing or advancing
